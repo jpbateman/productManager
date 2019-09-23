@@ -1,0 +1,22 @@
+<h1 class="test">Hi</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.title}}</td>
+            <td>{{product.price}}</td>
+            <td><img class="img" src="{{product.url}}"></td>
+            <td>
+                <button (click)="goToEdit(product._id)">Edit</button>
+                <button (click)="deleteProduct(product._id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

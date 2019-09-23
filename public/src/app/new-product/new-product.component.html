@@ -1,0 +1,19 @@
+<p>Add a new product:</p>
+
+<form (submit)="handleSubmit()">
+    <p *ngFor="let error of errors">{{error}}</p>
+    <div>
+        <label>Shitter Name</label>
+        <input type="text" name="title" [(ngModel)]="newProduct.title">
+    </div>
+    <div>
+        <label>Shitter Price</label>
+        <input type="number" name="price" [(ngModel)]="newProduct.price">
+    </div>
+    <div>
+        <label>URL for Shitter Image</label>
+        <input type="text" name="url" [(ngModel)]="newProduct.url">
+    </div>
+    <button type="button" (click)="handleCancel()">Cancel</button>
+    <button>Submit</button>
+</form>

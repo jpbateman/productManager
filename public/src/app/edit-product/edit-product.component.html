@@ -1,0 +1,18 @@
+<h1>Edit a Shitter</h1>
+<form (submit)="handleSubmit()" *ngIf="product !== null">
+    <p *ngFor="let error of errors">{{error}}</p>
+    <div>
+        <label>Name</label>
+        <input type="text" name="title" [(ngModel)]="product.title">
+    </div>
+    <div>
+        <label>Price</label>
+        <input type="number" name="price" [(ngModel)]="product.price">
+    </div>
+    <div>
+        <label>URL</label>
+        <input type="text" name="url" [(ngModel)]="product.url">
+    </div>
+    <button type="button" (click)="handleCancel()">Cancel</button>
+    <button>Submit</button>
+</form>
